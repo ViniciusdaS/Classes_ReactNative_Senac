@@ -1,19 +1,13 @@
 import React from "react";
 import {View, StyleSheet} from 'react-native'
 // importamos o componente criado
-import TextoApresentation from "@/components/componentsEtapasPI/TextoApresentation";
-import InputNome from "@/components/componentsEtapasPI/InputNome";
-import TextoLista from "@/components/componentsEtapasPI/TextoLista";
-import Lista from "@/components/componentsEtapasPI/Lista";
+import ModalTDS241T from "@/components/ModalTDS241T";
 
 export default function App(){
   return(
     <View style={styles.container}>
       {/** Título da tela  */}
-      <TextoApresentation />
-      <InputNome />
-      <TextoLista />
-      <Lista />
+      <ModalTDS241T />
     </View>
   )
 }
