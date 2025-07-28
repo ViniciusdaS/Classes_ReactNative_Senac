@@ -23,7 +23,11 @@ export default function ModalTDS241T(){
                     {/* Modal que aparece conforme o estado 'visible',
                     com fundo transparente e animação deslizante */}
                     <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
-                        
+                        <View style={{backgroundColor: 'white', padding:20, borderRadius:10}}>
+                            {/* Caixa branca com cantos arredondados e padding interno */}
+                            <Text style={{marginBottom:10}}>Este é um modal!</Text>
+                            <Button title="Fechar modal" onPress={() => setVisible(false)}/>
+                        </View>
                     </View>
                 </Modal>
             </View>
