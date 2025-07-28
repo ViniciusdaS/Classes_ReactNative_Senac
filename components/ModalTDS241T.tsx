@@ -25,8 +25,8 @@ export default function ModalTDS241T(){
                     <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
                         <View style={{backgroundColor: 'white', padding:20, borderRadius:10}}>
                             {/* Caixa branca com cantos arredondados e padding interno */}
-                            <Text style={{marginBottom:10}}>Este é um modal!</Text>
-                            <Button title="Fechar modal" onPress={() => setVisible(false)}/>
+                            <Text style={{marginBottom:10}}>É os guri ou não é ?</Text>
+                            <Button title="É" onPress={() => setVisible(false)}/>
                         </View>
                     </View>
                 </Modal>
