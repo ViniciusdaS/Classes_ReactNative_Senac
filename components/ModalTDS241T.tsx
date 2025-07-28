@@ -17,6 +17,15 @@ export default function ModalTDS241T(){
             <View style={{margin: 10}}>
                 {/* Container com margem para o botão */}
                 <Button title="Abrir modal" onPress={() => setVisible(true)} />
+                {/* Botão que ao ser pressionado altera o estado do modal, o tornando
+                visível */}
+                <Modal visible={visible} transparent animationType='slide'>
+                    {/* Modal que aparece conforme o estado 'visible',
+                    com fundo transparente e animação deslizante */}
+                    <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
+                        
+                    </View>
+                </Modal>
             </View>
         )
 }
