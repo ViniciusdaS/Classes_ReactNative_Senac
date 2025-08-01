@@ -16,7 +16,7 @@ export default function ModalTDS241T(){
         return(
             <View style={{margin: 10}}>
                 {/* Container com margem para o botão */}
-                <Button title="Abrir modal" onPress={() => setVisible(true)} />
+                <Button title="Open modal" onPress={() => setVisible(true)} />
                 {/* Botão que ao ser pressionado altera o estado do modal, o tornando
                 visível */}
                 <Modal visible={visible} transparent animationType='slide'>
@@ -25,8 +25,8 @@ export default function ModalTDS241T(){
                     <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
                         <View style={{backgroundColor: 'white', padding:20, borderRadius:10}}>
                             {/* Caixa branca com cantos arredondados e padding interno */}
-                            <Text style={{marginBottom:10}}>É os guri</Text>
-                            <Button title="É" onPress={() => setVisible(false)}/>
+                            <Text style={{marginBottom:10}}>Opened modal</Text>
+                            <Button title="Close modal" onPress={() => setVisible(false)}/>
                         </View>
                     </View>
                 </Modal>
