@@ -1,13 +1,15 @@
 import React from "react";
 import {View, StyleSheet} from 'react-native'
-import SwitchTDS from "@/components/switchTDS";
+import Produto from "@/components/produtoTDS";
+
+
 // importamos o componente criado
 
 export default function App(){
   return(
     <View style={styles.container}>
       {/** Título da tela  */}
-      <SwitchTDS />
+      <Produto nome="faca" lote="22" validade="10/09/2050" />
     </View>
   )
 }
