@@ -1,12 +1,13 @@
 import React from "react";
 import {View, StyleSheet} from 'react-native'
+import SwitchTDS from "@/components/switchTDS";
 // importamos o componente criado
 
 export default function App(){
   return(
     <View style={styles.container}>
       {/** Título da tela  */}
-      
+      <SwitchTDS />
     </View>
   )
 }
