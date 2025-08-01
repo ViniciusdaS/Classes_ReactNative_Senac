@@ -6,7 +6,7 @@
 */
 
 import React, {useState} from 'react';
-import {Modal, View, Button, Text} from 'react-native';
+import {Modal, View, Button, Text, StyleSheet} from 'react-native';
 
 export default function ModalTDS241T(){
     /* Estado que controla se o modal está visivel ou não. Inicialmente 
@@ -14,7 +14,7 @@ export default function ModalTDS241T(){
 
     const[visible, setVisible] = useState(false)
         return(
-            <View style={{margin: 10}}>
+            <View style={style.click}>
                 {/* Container com margem para o botão */}
                 <Button title="Open modal" onPress={() => setVisible(true)} />
                 {/* Botão que ao ser pressionado altera o estado do modal, o tornando
@@ -22,10 +22,10 @@ export default function ModalTDS241T(){
                 <Modal visible={visible} transparent animationType='slide'>
                     {/* Modal que aparece conforme o estado 'visible',
                     com fundo transparente e animação deslizante */}
-                    <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
-                        <View style={{backgroundColor: 'white', padding:20, borderRadius:10}}>
+                    <View>
+                        <View style={style.close}>
                             {/* Caixa branca com cantos arredondados e padding interno */}
-                            <Text style={{marginBottom:10}}>Opened modal</Text>
+                            <Text>Opened modal</Text>
                             <Button title="Close modal" onPress={() => setVisible(false)}/>
                         </View>
                     </View>
@@ -33,3 +33,17 @@ export default function ModalTDS241T(){
             </View>
         )
 }
+
+const style = StyleSheet.create({
+    click:{
+        margin:10,
+    },
+    botao:{
+        backgroundColor:'green',
+        width:300,
+        height:200
+    },
+    close:{
+        marginTop:50
+    }
+})
