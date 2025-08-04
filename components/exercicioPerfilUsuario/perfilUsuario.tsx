@@ -20,7 +20,7 @@ const Perfil: React.FC<PerfilUsuario> = ({nome, idade, cidade}) => {
 const styles = StyleSheet.create({
     container:{
         marginTop:100,
-        backgroundColor:'whitesmoke',
+        backgroundColor:'black',
         width:200,
         height:200,
         borderBottomWidth:3,
