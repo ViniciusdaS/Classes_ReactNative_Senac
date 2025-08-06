@@ -23,15 +23,18 @@ export default function App(){
     setAnimes([
       ...animes,
       {id: Date.now(), nome: novoAnime, classificacao: 'legal'},
-      
+
     ])
+    setNovoAnime('') // Limpa o campo após adicionar
+  }
+  // Função para atualizar a classificação de um anime especifico
+
+const avaliarAnime = (id: number, novaClassificacao: string) => {
+      setAnimes((prevAnimes) => 
+      prevAnimes.map((anime) => 
+      anime.id === id
+      ? {...anime, novaClassificacao: novaClassificacao}
+      :anime
+    ))
   }
 }
-const styles = StyleSheet.create({
-  container:{
-    flex: 1,
-    backgroundColor: 'black',
-    alignItems: 'center',
-    padding: 24,
-  }
-})
