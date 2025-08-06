@@ -34,17 +34,17 @@ const styles = StyleSheet.create({
         borderRadius:10,
         marginTop:70,
         width:200,
-        height:200,
+        height:100,
     },
     nomeAnime:{
         fontSize:25,
-        paddingTop:50,
+        paddingTop:10,
         textAlign:'center',
         color:'black'
     },
     classificacao:{
         fontSize:20,
-        paddingTop:30,
+        paddingTop:10,
         textAlign:'center'
     }
 })
