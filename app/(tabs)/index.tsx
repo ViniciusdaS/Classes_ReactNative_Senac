@@ -1,7 +1,8 @@
 import React from "react";
-import {View, StyleSheet} from 'react-native'
+import {View, StyleSheet, TextInput, Button} from 'react-native'
 import AnimeCard from "@/components/AnimeCard";
 import { useState } from 'react';
+import { ScrollView } from "react-native-gesture-handler";
 
 
 // importamos o componente criado
@@ -37,4 +38,30 @@ const avaliarAnime = (id: number, novaClassificacao: string) => {
       :anime
     ))
   }
+  return(
+    <View style={styles.container}>
+      <TextInput style={styles.input} placeholder="digite o nome do anime" value={novoAnime} onChangeText={setNovoAnime} />
+      <Button title="Adicionar anime" onPress={adicionarAnime} />
+
+
+      <ScrollView style={{width:'100%', marginTop:20}} />
+      {animes.map((anime) => (
+      <View key={anime.nome} classificacao={anime.classificacao}>
+        <AnimeCard nome={anime.nome} classificacao={anime.classificacao} />
+        <View style={styles.botoes}>
+          <Button title="legal" onPress={() => avaliarAnime(anime.id, 'legal')}></Button>
+        </View>
+        ))}
+    </View>
+  )
 }
+
+const styles = StyleSheet.create({
+  container:{
+    backgroundColor:'black',
+    height:'100%', 
+  },
+  input:{
+    paddingTop:150,
+  }
+})
