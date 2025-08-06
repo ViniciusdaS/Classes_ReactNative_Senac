@@ -1,6 +1,6 @@
 import React from "react";
 import {View, StyleSheet} from 'react-native'
-import PedidoCafe from "@/components/PedidoCafe";
+import AnimeCard from "@/components/AnimeCard";
 
 
 // importamos o componente criado
@@ -9,7 +9,7 @@ export default function App(){
   return(
     <View style={styles.container}>
       {/** Título da tela  */}
-      <PedidoCafe />
+      <AnimeCard nome="Demon Slayer" classificacao="legal" />
     </View>
   )
 }
