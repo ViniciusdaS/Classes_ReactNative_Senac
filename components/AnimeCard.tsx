@@ -28,11 +28,13 @@ const AnimeCard: React.FC<Props> = ({ nome, classificacao}) => {
 
 const styles = StyleSheet.create({
     card:{
-        borderColor:'black',
-        borderBottomWidth:5,
-        borderRightWidth:5,
+        borderColor:'whitesmoke',
+        borderBottomWidth:3,
+        borderRightWidth:3,
+        borderLeftWidth:3,
+        borderTopWidth:3,
         borderRadius:10,
-        marginTop:70,
+        marginTop:30,
         width:200,
         height:100,
     },

@@ -6,20 +6,31 @@ import { useState } from 'react';
 
 // importamos o componente criado
 
+type Anime = {
+  id: number
+  nome: string
+  classificacao: string
+}
+
 export default function App(){
-  return(
-    <View style={styles.container}>
-      {/** Título da tela  */}
-      <AnimeCard nome="Demon Slayer" classificacao="legal" />
-      <AnimeCard nome="Tokio Ghoul" classificacao="mediano"/>
-      <AnimeCard nome="Boku no hero" classificacao="ruim"/>
-    </View>
-  )
+  const [animes, setAnimes] = useState<Anime[]>([])
+
+  const [novoAnime, setNovoAnime] = useState<string>('')
+
+  const adicionarAnime = () => {
+    if(novoAnime.trim() === '') return
+
+    setAnimes([
+      ...animes,
+      {id: Date.now(), nome: novoAnime, classificacao: 'legal'},
+      
+    ])
+  }
 }
 const styles = StyleSheet.create({
   container:{
     flex: 1,
-    backgroundColor: 'whitesmoke',
+    backgroundColor: 'black',
     alignItems: 'center',
     padding: 24,
   }
