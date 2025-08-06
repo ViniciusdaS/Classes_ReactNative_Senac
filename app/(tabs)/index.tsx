@@ -1,6 +1,6 @@
 import React from "react";
 import {View, StyleSheet} from 'react-native'
-import Perfil from "@/components/exercicioPerfilUsuario/perfilUsuario";
+import PedidoCafe from "@/components/PedidoCafe";
 
 
 // importamos o componente criado
@@ -9,7 +9,7 @@ export default function App(){
   return(
     <View style={styles.container}>
       {/** Título da tela  */}
-      <Perfil nome="Vinicius" idade={19} cidade="São Leopoldo" />
+      <PedidoCafe />
     </View>
   )
 }
