@@ -10,7 +10,7 @@ import AnimeCard from '@/components/AnimeCard';
 type Anime = {  
   id: number;  
   nome: string;  
-  classificacao: string;  
+  classificacao: string;
 };  
 // Define um tipo TypeScript para um anime, com id único, nome e classificação.
 
