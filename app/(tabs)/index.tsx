@@ -104,6 +104,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
+    paddingTop:70,
     flex: 1, // Ocupa toda a tela verticalmente
     padding: 20, // Espaçamento interno das bordas da tela
     backgroundColor: '#f2f2f2', // Cor de fundo clara da tela

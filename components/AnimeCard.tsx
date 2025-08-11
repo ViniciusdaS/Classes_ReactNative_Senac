@@ -46,12 +46,14 @@ const styles = StyleSheet.create({
     alignItems: 'center', // Centraliza o conteúdo horizontalmente  
     elevation: 5, // Sombra para destacar o card (Android)  
   },  
-  nomeAnime: {  
+  nomeAnime: { 
+    paddingTop:20, 
     fontSize: 20, // Tamanho maior para o nome do anime  
     fontWeight: 'bold', // Texto em negrito para dar ênfase  
     color: '#fff', // Cor branca para contraste com o fundo colorido  
   },  
-  classificacao: {  
+  classificacao: { 
+    paddingTop:20, 
     fontSize: 16, // Tamanho menor para a classificação  
     color: '#fff', // Cor branca para o texto  
   },  
