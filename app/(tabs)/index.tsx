@@ -7,6 +7,8 @@ import { View, StyleSheet, TextInput, Button, ScrollView } from 'react-native';
 import AnimeCard from '@/components/AnimeCard';  
 // Importa o componente AnimeCard, que exibe o card com o nome e cor baseado na classificação do anime.
 
+import ContadorBasico from '@/components/ContadorInterativo';
+
 type Anime = {  
   id: number;  
   nome: string;  
@@ -54,6 +56,7 @@ export default function App() {
   return (
     <View style={styles.container}>  
     {/* Container principal da tela */}
+    <ContadorBasico />
 
       <TextInput
         style={styles.input}  
@@ -96,11 +99,14 @@ export default function App() {
               />
             </View>
           </View>
+
+          
         ))}
       </ScrollView>
     </View>
   );
-}
+} 
+
 
 const styles = StyleSheet.create({
   container: {

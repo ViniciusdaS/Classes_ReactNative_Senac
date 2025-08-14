@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, Text, StyleSheet, Touchable} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 // Componente funcional ContadorBasico 
 
 export default function ContadorBasico(): React.ReactElement{
@@ -35,8 +35,12 @@ export default function ContadorBasico(): React.ReactElement{
                 // Ao clicar inverte o estado
                 onPress={() => setAtivo((a) => !a)}>
                     {/* Texto do botão muda conforme o estado */}
-                    <Text style={styles.textBotao}>{ativo ? "pausar" : "continuar"}</Text>
+                    <Text style={styles.textoBotao}>{ativo ? "pausar" : "continuar"}</Text>
                     </TouchableOpacity>
+
+                    <TouchableOpacity style={[styles.botao, {backgroundColor:'blue'}]} onPress={() => setContador(0)} />
+                    <Text style={styles.textoBotao}>Reiniciar</Text>
+
             </View>
         </View>
     )
@@ -52,13 +56,17 @@ const styles = StyleSheet.create({
         fontSize:20
     },
     botoes:{
-        width:40,
-        height:20
+        flexDirection:'row'
     },
     botao:{
-
+        paddingVertical:15,
+        paddingHorizontal:30,
+        marginHorizontal:10,
+        borderRadius:10
     },
-    textBotao:{
-        
+    textoBotao:{
+        color:'red',
+        fontWeight:'bold',
+        fontSize:18
     }
 })
